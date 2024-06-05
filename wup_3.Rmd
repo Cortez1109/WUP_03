@@ -8,21 +8,31 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
+  
 ```{r include=FALSE}
 require(tidyverse)
 require(tigerstats)
 davisdata <- read.csv(file="UCDavis.csv")
-```
-## Our Goal is to answer this question Is there a difference between the alcohol consumed between the row
-## you choose to sit in??
+```   
+
+# Introduction in the year ... 
+ Our Goal is to answer this question Is there a difference between the alcohol consumed between the row you choose to sit in??
+
+The data came from UCDavis in the year 
+
+$H_0$: There is no difference between the average number of drinks imbibed between people conditioned on the row they sit in.
+
+$H_A$: The average number drinks is different between at least two rows.   
+
 
 ## Now with ggplot - first select the basic data
 
 ```{r}
 basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 ```
+
 ## Now add in boxplot
+
 
 ```{r}
 basicCN + geom_boxplot()
