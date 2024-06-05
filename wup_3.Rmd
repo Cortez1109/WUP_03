@@ -24,6 +24,10 @@ $H_0$: There is no difference between the average number of drinks imbibed betwe
 
 $H_A$: The average number drinks is different between at least two rows.   
 
+# Methods  
+In the data set davisdata seat is a catagorical variable , alcohol is numerical  
+
+We try and prodict alochol ~ base on seat
 
 ## Now with ggplot - first select the basic data
 
