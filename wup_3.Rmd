@@ -27,31 +27,35 @@ $H_A$: The average number drinks is different between at least two rows.
 # Methods  
 In the data set davisdata seat is a catagorical variable , alcohol is numerical  
 
-We try and prodict alochol ~ base on seat
+We try and prodict alochol ~ Seat so we use the ... helper file
 
-## Now with ggplot - first select the basic data
+# Results  
+
+## Desciptive Results    
+
+## Graphical summary  
 
 ```{r}
 basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 ```
-
-## Now add in boxplot
-
+Now add in boxplot
 
 ```{r}
 basicCN + geom_boxplot()
 ```
-  
-  
-### get fancy  
 
-```{r}
-basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
-```
+This box plotshows that    
+### Numerical summary  
 
-## Numerical Summarys 
 
-## Inferential Tests
+
+
+
+
+The numerical summery showes that.. 
+
+### Inferential Results 
+
 
 ## Conclusions
 
