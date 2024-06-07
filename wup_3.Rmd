@@ -18,7 +18,7 @@ davisdata <- read.csv(file="UCDavis.csv")
 # Introduction in the year ... 
  Our Goal is to answer this question Is there a difference between the alcohol consumed between the row you choose to sit in??
 
-The data came from UCDavis in the year 
+The data came from UCDavis in the year 1900s.
 
 $H_0$: There is no difference between the average number of drinks imbibed between people conditioned on the row they sit in.
 
@@ -31,7 +31,7 @@ We try and prodict alochol ~ Seat so we use the ... helper file
 
 # Results  
 
-## Desciptive Results    
+## Desciptive Results
 
 ## Graphical summary  
 
@@ -44,19 +44,21 @@ Now add in boxplot
 basicCN + geom_boxplot()
 ```
 
-This box plotshows that    
-### Numerical summary  
+This box plotshows that there are more students who drink alochol seating the back row than the middle and front.    
+### Numerical Descriptive Results
 
+```{r}
+ favstats(alcohol~Seat,data=ucdavis1)
+```
 
+This shows that back seat is consumes 55% more alcohol than the front which is about 20%or middle  which is 35%.
 
-
-
-
-The numerical summery showes that.. 
 
 ### Inferential Results 
 
+The p-value is 0.000116, less than 0.05 so we reject the null hypothesis 
+
 
 ## Conclusions
-
+The seat in the back has a higher avaerage of people consuming alcohol levels between the diffferent seat position.It looks like the seat in the back have higher average of people consuming alachole than the ones in the front.
 
