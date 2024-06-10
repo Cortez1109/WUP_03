@@ -55,10 +55,23 @@ This shows that back seat is consumes 55% more alcohol than the front which is a
 
 
 ### Inferential Results 
-
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
 The p-value is 0.000116, less than 0.05 so we reject the null hypothesis 
+There is a difference in alcohol consuption based on wherepeople sit. 
+
+
+## When significant follow up with TukeyHSD  
+
+```{r}
+plot(TukeyHSD(model1))
+```
+
+
 
 
 ## Conclusions
-The seat in the back has a higher avaerage of people consuming alcohol levels between the diffferent seat position.It looks like the seat in the back have higher average of people consuming alachole than the ones in the front.
+The seat in the back has a higher avaerage of people consuming alcohol levels between the diffferent seat position.
 
